@@ -1,0 +1,60 @@
+@import 'media_query';
+
+#hamburger{
+    visibility: hidden;
+}
+.masternav {
+    background-color: #5890B0;
+
+    &__ul{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+
+        &--stylelink{
+            color: #f0f0f0;
+            text-decoration: none;
+            font-family: 'Rubik', sans-serif;
+            
+        }
+    }
+    @media all and (max-width :568px){
+            
+        &__ul{
+            visibility: hidden;
+            
+        }
+        #logo-name, #hamburger{
+            visibility: visible;
+        }
+    }
+}
+
+.subnav {
+    background-color: grey;
+    margin-top:0; 
+    margin-bottom: 0;
+
+    &__ul{
+        margin: 0;
+    }
+
+    @media all and (max-width : 568px){
+        &__ul{
+            background-color: aquamarine;
+            margin: 0;
+            font-size: 0.8rem;
+            
+        }
+    }
+}
+
+.cartbtn{
+    background-color: #5890B0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s     ease, color 0.3s ease;
+}
